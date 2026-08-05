@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shahd Aboelmakarm | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Background elements for visual flair -->
+      <div class="bg-shape bg-shape-1"></div>
+      <div class="bg-shape bg-shape-2"></div>
+
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="nav-content">
+          <div class="logo">Shahd.</div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="resume.pdf" id="resume-link" class="btn-primary" download>Download Resume</a>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <!-- Hero Section -->
+        <section id="about" class="hero">
+          <div class="hero-content">
+            <div class="profile-img-container">
+              <!-- Dynamically populated -->
+              <div class="skeleton-avatar"></div>
+            </div>
+            <div class="hero-text">
+              <h1 id="user-name">Loading...</h1>
+              <h2 id="user-bio">...</h2>
+              <p>Welcome to my portfolio! Here you can explore the projects I've built and my contributions to the open-source community.</p>
+              <div class="social-links" id="social-links">
+                <a href="https://github.com/shahdAboelmakarm22" target="_blank" class="social-icon">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+          <h2>My Projects</h2>
+          <div class="projects-grid" id="projects-grid">
+            <!-- Dynamically populated by JS -->
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+          </div>
+        </section>
+      </main>
+      
+      <footer>
+        <p>&copy; 2026 Shahd Aboelmakarm. Built with Vite.</p>
+      </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
