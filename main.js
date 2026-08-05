@@ -20,15 +20,13 @@ async function fetchProfile() {
     const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
     const data = await response.json();
     
-    // Update DOM
-    document.getElementById('user-name').textContent = data.name || data.login;
-    document.getElementById('user-bio').textContent = data.bio || 'Computer Engineer';
-    
+    // Only update image since we hardcoded the resume text
     const imgContainer = document.querySelector('.profile-img-container');
     imgContainer.innerHTML = `<img src="${data.avatar_url}" alt="${data.name}" />`;
     
   } catch (error) {
     console.error('Error fetching profile:', error);
+    document.querySelector('.profile-img-container').innerHTML = `<img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Placeholder" />`;
   }
 }
 
@@ -38,7 +36,7 @@ async function fetchProjects() {
     const repos = await response.json();
     
     const grid = document.getElementById('projects-grid');
-    grid.innerHTML = ''; // clear skeletons
+    grid.innerHTML = ''; 
     
     // Filter out forks if desired, or show them
     const projects = repos.filter(repo => !repo.fork);
