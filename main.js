@@ -72,6 +72,5 @@ async function fetchProjects() {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-  fetchProfile();
   fetchProjects();
 });
