@@ -41,13 +41,23 @@ async function fetchProjects() {
     // Filter out forks if desired, or show them
     let projects = repos.filter(repo => !repo.fork);
     
-    // Remove repos containing "test" in the name
-    projects = projects.filter(repo => !repo.name.toLowerCase().includes('test'));
+    // Explicitly hide these repositories
+    const hiddenRepos = [
+      'shahdaboelmakarm22.github.io', 
+      'ptbridge-pkt-to-vm-'
+    ];
+    projects = projects.filter(repo => {
+      const name = repo.name.toLowerCase();
+      if (name.includes('test')) return false;
+      if (hiddenRepos.includes(name)) return false;
+      return true;
+    });
     
     // Remove duplicate projects based on normalized names
     const seenNames = new Set();
     projects = projects.filter(repo => {
-      const normalizedName = repo.name.replace(/-/g, ' ').toLowerCase().trim();
+      // Replace both dashes and underscores with spaces to properly deduplicate
+      const normalizedName = repo.name.replace(/[-_]/g, ' ').toLowerCase().trim();
       if (seenNames.has(normalizedName)) {
         return false;
       }
