@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shahd Aboelmakarm | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-y418-anx.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D711WiOt.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="bg-shape bg-shape-1"></div>
+      <div class="bg-shape bg-shape-2"></div>
+
+      <nav class="navbar">
+        <div class="nav-content">
+          <div class="logo">Shahd.</div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#featured-projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="Shahd_Galal_Resume.pdf" id="resume-link" class="btn-primary" download>Download Resume</a>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <!-- Hero Section -->
+        <section id="about" class="hero">
+          <div class="hero-content">
+            <div class="profile-img-container">
+              <div class="skeleton-avatar"></div>
+            </div>
+            <div class="hero-text">
+              <h1 id="user-name">Shahd Aboelmakarm</h1>
+              <h2 id="user-bio">Computer & Network Engineer</h2>
+              <p>AWS Certified Solutions Architect & CCNA trained. Full-stack developer with hands-on experience in REST API development, cloud and serverless systems, and computer networks.</p>
+              <div class="social-links" id="social-links">
+                <a href="https://github.com/shahdAboelmakarm22" target="_blank" class="social-icon">GitHub</a>
+                <a href="https://linkedin.com/in/shahd-aboelmakaram" target="_blank" class="social-icon">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-container">
+          <h2>Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content project-card">
+                <h3>Software Intern @ DXC Technology</h3>
+                <span class="date">Apr 2026 – Jul 2026 | Egypt</span>
+                <ul>
+                  <li>Built an IoT monitoring website that ingests live sensor data and displays it with configurable thresholds and a notification system for out-of-range readings.</li>
+                  <li>Worked in an Agile team of 5, rotating across front-end, back-end, testing, and DevOps.</li>
+                  <li><strong>Stack:</strong> Angular, Spring Boot, Docker, Jenkins (CI/CD)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content project-card">
+                <h3>Network Management @ ECPC</h3>
+                <span class="date">June 2024 | Egypt</span>
+                <ul>
+                  <li>Configured and managed contest network infrastructure: set up switches, tested connectivity, and inspected devices.</li>
+                  <li>Provided on-floor technical support during the live contest, diagnosing and resolving hardware and network issues under time pressure.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="featured-projects" class="section-container">
+          <h2>Featured Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card featured-card">
+              <h3>AI-Driven Serverless Image Processing</h3>
+              <p>Built a fully event-driven, serverless image pipeline on AWS. Client uploads via S3 presigned URLs, triggering automated resizing and Amazon Rekognition label detection.</p>
+              <div class="tags">
+                <span>AWS Lambda</span><span>S3</span><span>API Gateway</span><span>DynamoDB</span>
+              </div>
+            </div>
+            <div class="project-card featured-card">
+              <h3>IoT Monitoring Platform</h3>
+              <p>Web platform that ingests live sensor data and displays it in real time, with user-configurable thresholds and automated alerts. Containerized with Docker and Jenkins CI/CD.</p>
+              <div class="tags">
+                <span>Angular</span><span>Spring Boot</span><span>Docker</span><span>Jenkins</span>
+              </div>
+            </div>
+            <div class="project-card featured-card">
+              <h3>ACPC Contest Platform</h3>
+              <p>Re-engineered the ACPC contest system with a modern React UI on top of PC2. Designed REST APIs (Jersey/Jetty) bridging UI to PC2 with structured logging.</p>
+              <div class="tags">
+                <span>React</span><span>Java</span><span>GitLab CI/CD</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Other Projects (GitHub) -->
+        <section id="projects" class="section-container">
+          <h2>More Open Source Work</h2>
+          <div class="projects-grid" id="projects-grid">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-container">
+          <h2>Skills & Certifications</h2>
+          <div class="skills-wrapper">
+            <div class="skills-category project-card">
+              <h3>Certifications</h3>
+              <ul class="cert-list">
+                <li>🏆 AWS Certified Solutions Architect – Associate</li>
+                <li>🏆 Cisco CCNA Training (120 hours)</li>
+              </ul>
+            </div>
+            <div class="skills-category project-card">
+              <h3>Cloud & DevOps</h3>
+              <div class="tags"><span class="tag-skill">AWS</span><span class="tag-skill">Docker</span><span class="tag-skill">Jenkins</span><span class="tag-skill">GitLab CI/CD</span><span class="tag-skill">Serverless</span></div>
+            </div>
+            <div class="skills-category project-card">
+              <h3>Full-Stack & Web</h3>
+              <div class="tags"><span class="tag-skill">React</span><span class="tag-skill">Angular</span><span class="tag-skill">Spring Boot</span><span class="tag-skill">MERN</span><span class="tag-skill">Java (Jersey/Jetty)</span></div>
+            </div>
+            <div class="skills-category project-card">
+              <h3>Networking</h3>
+              <div class="tags"><span class="tag-skill">Network Management</span><span class="tag-skill">Cisco Routing/Switching</span><span class="tag-skill">Troubleshooting</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-container">
+          <h2>Get In Touch</h2>
+          <div class="projects-grid">
+            <a href="mailto:shahd2014542@gmail.com" class="project-card contact-card" style="text-align: center; text-decoration: none;">
+              <h3 style="margin-bottom: 0.5rem; font-size: 2rem;">📧</h3>
+              <h3 style="color: #f8fafc; margin-bottom: 0.5rem;">Email Me</h3>
+              <p style="color: #94a3b8;">shahd2014542@gmail.com</p>
+            </a>
+            <a href="tel:+201026663475" class="project-card contact-card" style="text-align: center; text-decoration: none;">
+              <h3 style="margin-bottom: 0.5rem; font-size: 2rem;">📱</h3>
+              <h3 style="color: #f8fafc; margin-bottom: 0.5rem;">Call Me</h3>
+              <p style="color: #94a3b8;">+20 102 666 3475</p>
+            </a>
+            <a href="https://linkedin.com/in/shahd-aboelmakaram" target="_blank" class="project-card contact-card" style="text-align: center; text-decoration: none;">
+              <h3 style="margin-bottom: 0.5rem; font-size: 2rem;">💼</h3>
+              <h3 style="color: #f8fafc; margin-bottom: 0.5rem;">LinkedIn</h3>
+              <p style="color: #94a3b8;">Connect professionally</p>
+            </a>
+          </div>
+        </section>
+
+      </main>
+      
+      <footer>
+        <p>&copy; 2026 Shahd Aboelmakarm. Built with Vite.</p>
+      </footer>
+    </div>
+  </body>
+</html>
