@@ -39,7 +39,21 @@ async function fetchProjects() {
     grid.innerHTML = ''; 
     
     // Filter out forks if desired, or show them
-    const projects = repos.filter(repo => !repo.fork);
+    let projects = repos.filter(repo => !repo.fork);
+    
+    // Remove repos containing "test" in the name
+    projects = projects.filter(repo => !repo.name.toLowerCase().includes('test'));
+    
+    // Remove duplicate projects based on normalized names
+    const seenNames = new Set();
+    projects = projects.filter(repo => {
+      const normalizedName = repo.name.replace(/-/g, ' ').toLowerCase().trim();
+      if (seenNames.has(normalizedName)) {
+        return false;
+      }
+      seenNames.add(normalizedName);
+      return true;
+    });
     
     projects.forEach(repo => {
       const card = document.createElement('div');
