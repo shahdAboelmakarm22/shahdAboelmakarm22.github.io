@@ -84,7 +84,7 @@
 
   /* Hero */
   .hero { padding: 4rem 0 2.5rem; }
-  .hero-grid { display: grid; grid-template-columns: 1fr 15rem; gap: 3rem; align-items: center; }
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
   .statusline { font-family: var(--mono); color: var(--accent2); margin: 0 0 .75rem; font-size: 1rem; }
   h1 {
     font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .02em;
@@ -107,7 +107,7 @@
   .role.typing #typed::after { content: "\2588"; margin-left: 2px; animation: blink .7s steps(1) infinite; }
   @keyframes blink { 50% { opacity: 0; } }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  .lede { max-width: 38rem; color: var(--muted); font-size: 1.12rem; margin: 0 0 1.75rem; }
+  .lede { max-width: 44rem; color: var(--muted); font-size: 1.12rem; margin: 0 0 1.75rem; }
   .actions { display: flex; flex-wrap: wrap; gap: 1rem; }
   .btn {
     display: inline-block; padding: .6rem 1.2rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: .92rem;
@@ -351,12 +351,7 @@
             <a class="btn" href="https://www.linkedin.com/in/shahd-a-110b101b4">LinkedIn</a>
           </div>
         </div>
-        <div class="photo-frame"><div class="photo">
-          <img src="profile.png" alt="Portrait of Shahd Galal"
-               onerror="this.parentNode.innerHTML='&lt;div class=&quot;initials&quot; aria-hidden=&quot;true&quot;&gt;SG&lt;/div&gt;'">
-        </div>
-        </div>
-      </div>
+</div>
 
       <ul class="stats">
         <li><b data-count="5">5</b><span>roles and trainings</span></li>
