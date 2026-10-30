@@ -201,6 +201,7 @@
   .tags { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: 0; padding: 0; }
   .tags li { font-family: var(--mono); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); font-size: .82rem; padding: 0 .5rem; }
   .tags li.match { background: var(--accent2); border-color: var(--accent2); color: var(--on-accent); box-shadow: 0 0 12px var(--glow2); }
+  .repo-note { color: var(--muted); font-family: var(--mono); font-size: .92rem; }
   .project ul.points { margin: .5rem 0 .75rem; padding-left: 1.2rem; }
   .project li { margin-bottom: .3rem; }
 
@@ -213,6 +214,8 @@
   .skills .chip, .skills .plain { font-size: .86rem; padding: 0 .65rem; }
   .skills .plain { font-family: var(--mono); border: 1px dashed var(--line); color: var(--muted); }
   .certs { list-style: none; margin: 0; padding: 0; }
+  .cert-group h3 { font-family: var(--mono); font-weight: 400; font-size: 1rem; color: var(--accent2); margin: 1.6rem 0 .6rem; }
+  .cert-group h3::before { content: "> "; }
   .certs li { padding: .7rem 0; border-bottom: 1px solid var(--line); }
   .certs small { color: var(--muted); font-family: var(--mono); font-size: .88rem; }
 
@@ -355,8 +358,8 @@
 
       <ul class="stats">
         <li><b data-count="5">5</b><span>roles and trainings</span></li>
-        <li><b data-count="3">3</b><span>projects built</span></li>
-        <li><b data-count="3">3</b><span>certifications</span></li>
+        <li><b data-count="5">5</b><span>projects built</span></li>
+        <li><b data-count="13">13</b><span>certificates</span></li>
         <li><b data-count="120">120</b><span>hours of CCNA training</span></li>
       </ul>
 
@@ -438,12 +441,35 @@
       <h2 class="title">Projects</h2>
       <div class="filters" role="group" aria-label="Filter projects">
         <button class="chip on" type="button" data-cat="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-cat="data" aria-pressed="false">Data</button>
         <button class="chip" type="button" data-cat="cloud" aria-pressed="false">Cloud</button>
         <button class="chip" type="button" data-cat="fullstack" aria-pressed="false">Full-stack</button>
         <button class="chip" type="button" data-cat="devops" aria-pressed="false">CI/CD and DevOps</button>
       </div>
       <p class="status" id="status" aria-live="polite"></p>
       <div class="project-list" id="projectList">
+      <article class="project" data-cats="data">
+        <div>
+          <h3>ITI SSIS Course Lab</h3>
+          <ul class="tags"><li>SSIS</li><li>ETL</li></ul>
+        </div>
+        <div>
+          <p>Hands-on labs from the ITI course on SQL Server Integration Services (SSIS), practicing ETL workflows.</p>
+          <a href="https://github.com/shahdAboelmakarm22/ITI-SSIS-Course-Lab">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project" data-cats="data devops">
+        <div>
+          <h3>DataOps Mini Project</h3>
+          <ul class="tags"><li>DataOps</li></ul>
+        </div>
+        <div>
+          <p>A hands-on mini project on DataOps practices for building and running data pipelines.</p>
+          <a href="https://github.com/shahdAboelmakarm22/dataops-mini-project">View on GitHub</a>
+        </div>
+      </article>
+
       <article class="project" data-cats="cloud">
         <div>
           <h3>AI-Driven Serverless Image Processing Pipeline</h3>
@@ -456,7 +482,7 @@
             <li>Cut package size and cold-start issues by loading dependencies at runtime into Lambda’s /tmp.</li>
             <li>Fixed S3 SigV4 and CORS failures to make uploads secure.</li>
           </ul>
-          <a href="https://github.com/shahdAboelmakarm22">View on GitHub</a>
+          <a href="https://github.com/shahdAboelmakarm22/Image_Processing">View on GitHub</a>
         </div>
       </article>
       <article class="project" data-cats="fullstack devops">
@@ -471,7 +497,7 @@
             <li>Added structured logging and validated every endpoint with Postman.</li>
             <li>Set up a GitLab CI/CD pipeline for automated builds and deployment.</li>
           </ul>
-          <a href="https://github.com/shahdAboelmakarm22">View on GitHub</a>
+          <span class="repo-note">Source code is hosted on the AAST GitLab.</span>
         </div>
       </article>
       <article class="project" data-cats="fullstack devops">
@@ -485,7 +511,7 @@
             <li>User-configurable thresholds with automated notifications.</li>
             <li>Containerized with Docker and deployed through a Jenkins CI/CD pipeline.</li>
           </ul>
-          <a href="https://github.com/shahdAboelmakarm22">View on GitHub</a>
+          <a href="https://github.com/AbdElkader-moh/FullProjectIntern">View on GitHub</a>
         </div>
       </article>
       </div>
@@ -503,13 +529,46 @@
         <div><dt>Languages</dt><dd class="chips"><span class="chip-slot">Arabic (native)</span><span class="chip-slot">English (fluent)</span><span class="chip-slot">German (intermediate)</span></dd></div>
       </dl>
 
-      <h2 class="title" style="margin-top:2.5rem">Certifications and education</h2>
-      <ul class="certs">
-        <li><strong>AWS Certified Solutions Architect – Associate</strong> <small>Amazon Web Services, 2026</small></li>
-        <li><strong>Fortinet NSE 4 – FortiOS 7.6 Administrator</strong> <small>Fortinet</small></li>
-        <li><strong>Cisco CCNA (200-301) Training</strong> <small>Telecom Egypt (WE), 120 hours, 2024</small></li>
-        <li><strong>B.Sc. in Computer Engineering</strong> <small>AAST, Alexandria, 2021 – 2026</small></li>
-      </ul>
+      <h2 class="title" style="margin-top:2.5rem">Certificates and education</h2>
+      <div class="cert-group">
+        <h3>Professional certifications</h3>
+        <ul class="certs">
+          <li><strong>AWS Certified Solutions Architect – Associate</strong> <small>Amazon Web Services, May 2026</small></li>
+          <li><strong>Fortinet NSE 4 – FortiOS 7.6 Administrator</strong> <small>Fortinet, Sep 2026</small></li>
+        </ul>
+      </div>
+      <div class="cert-group">
+        <h3>Cisco training</h3>
+        <ul class="certs">
+          <li><strong>CCNA: Introduction to Networks</strong> <small>Cisco Networking Academy</small></li>
+          <li><strong>CCNA: Switching, Routing, and Wireless Essentials</strong> <small>Cisco Networking Academy</small></li>
+          <li><strong>CCNA: Enterprise Networking, Security, and Automation</strong> <small>Cisco Networking Academy</small></li>
+          <li><strong>CCNA Security course</strong> <small>AAST, 2023</small></li>
+          <li><strong>Cisco CCNA (200-301) Training</strong> <small>Telecom Egypt (WE), 120 hours, 2024</small></li>
+        </ul>
+      </div>
+      <div class="cert-group">
+        <h3>Courses</h3>
+        <ul class="certs">
+          <li><strong>Computer Network Fundamentals</strong> <small>MaharaTech (ITI Mooca), Aug 2024</small></li>
+          <li><strong>Implementation of Computer Network Fundamentals</strong> <small>MaharaTech (ITI Mooca), Sep 2024</small></li>
+          <li><strong>Introduction to Network Security</strong> <small>MaharaTech (ITI Mooca), Sep 2024</small></li>
+          <li><strong>Cybersecurity For All</strong> <small>MaharaTech (ITI Mooca)</small></li>
+          <li><strong>Introduction to Cybersecurity Awareness</strong> <small>HP</small></li>
+        </ul>
+      </div>
+      <div class="cert-group">
+        <h3>Internship</h3>
+        <ul class="certs">
+          <li><strong>DXC Application Development Internship Program</strong> <small>Certificate of completion, Jul 2026</small></li>
+        </ul>
+      </div>
+      <div class="cert-group">
+        <h3>Education</h3>
+        <ul class="certs">
+          <li><strong>B.Sc. in Computer Engineering</strong> <small>AAST, Alexandria, 2021 – 2026</small></li>
+        </ul>
+      </div>
     </section>
 
     <section id="terminal">
@@ -667,7 +726,7 @@
   var projects = $$('.project');
   var cats = $$('.filters .chip');
   var status = $('#status');
-  var catNames = { all: 'all projects', cloud: 'cloud projects', fullstack: 'full-stack projects', devops: 'projects with CI/CD and DevOps' };
+  var catNames = { all: 'all projects', data: 'data projects', cloud: 'cloud projects', fullstack: 'full-stack projects', devops: 'projects with CI/CD and DevOps' };
   function tagsOf(p) { return $$('.tags li', p).map(function (li) { return li.textContent; }); }
   function clearMatch() { $$('.tags li.match').forEach(function (li) { li.classList.remove('match'); }); }
   function setStatus(text, withClear) {
@@ -1006,18 +1065,32 @@
         'Jun 2024         Network Support Team Member, ECPC']);
     },
     projects: function () {
-      lines(['1. AI-Driven Serverless Image Processing Pipeline',
-        '   AWS Lambda, S3, API Gateway, Rekognition, DynamoDB',
-        '2. ACPC Contest Platform (Graduation Project)',
-        '   Java, Jersey, Jetty, React, GitLab CI/CD',
-        '3. IoT Monitoring Platform',
-        '   Angular, Spring Boot, Docker, Jenkins'], '');
+      linkLine('1. ITI SSIS Course Lab (SSIS, ETL)      ', 'https://github.com/shahdAboelmakarm22/ITI-SSIS-Course-Lab', 'repo');
+      linkLine('2. DataOps Mini Project (DataOps)       ', 'https://github.com/shahdAboelmakarm22/dataops-mini-project', 'repo');
+      linkLine('3. Serverless Image Pipeline (AWS)      ', 'https://github.com/shahdAboelmakarm22/Image_Processing', 'repo');
+      linkLine('4. IoT Monitoring Platform (Angular...) ', 'https://github.com/AbdElkader-moh/FullProjectIntern', 'repo');
+      line('5. ACPC Contest Platform (Java, React). Source code is on the AAST GitLab.');
       linkLine('More on GitHub:', 'https://github.com/shahdAboelmakarm22', 'github.com/shahdAboelmakarm22');
     },
     certs: function () {
-      lines(['AWS Certified Solutions Architect - Associate (2026)',
-        'Fortinet NSE 4 - FortiOS 7.6 Administrator',
-        'Cisco CCNA (200-301) Training, 120 hours (2024)']);
+      lines(['Professional',
+        '  AWS Certified Solutions Architect - Associate (May 2026)',
+        '  Fortinet NSE 4 - FortiOS 7.6 Administrator (Sep 2026)',
+        'Cisco training',
+        '  CCNA: Introduction to Networks',
+        '  CCNA: Switching, Routing, and Wireless Essentials',
+        '  CCNA: Enterprise Networking, Security, and Automation',
+        '  CCNA Security course (AAST, 2023)',
+        '  Cisco CCNA (200-301) Training, 120 hours (WE, 2024)',
+        'Courses',
+        '  MaharaTech: Computer Network Fundamentals',
+        '  MaharaTech: Implementation of Computer Network Fundamentals',
+        '  MaharaTech: Introduction to Network Security',
+        '  MaharaTech: Cybersecurity For All',
+        '  HP: Introduction to Cybersecurity Awareness',
+        'Internship',
+        '  DXC Application Development Internship Program (Jul 2026)',
+        'Total: 13 certificates']);
     },
     education: function () { line('B.Sc. in Computer Engineering, AAST, Alexandria, 2021 - 2026'); },
     contact: function () {
