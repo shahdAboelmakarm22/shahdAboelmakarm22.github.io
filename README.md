@@ -4,9 +4,9 @@
 
 ### Cloud & Data Engineer · Serverless Builder · Automation Enthusiast
 
-<a href="https://shahd-aboelmakarm22-github-io.vercel.app"><img src="https://img.shields.io/badge/ENTER%20PORTFOLIO-00E5FF?style=for-the-badge&logo=vercel&logoColor=09051A" alt="Enter portfolio"></a>
-<a href="Shahd_Galal_Resume.pdf"><img src="https://img.shields.io/badge/DOWNLOAD%20RESUME-FF2BD6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download resume"></a>
-<a href="https://www.linkedin.com/in/shahd-a-110b101b4"><img src="https://img.shields.io/badge/CONNECT-LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+<a href="https://shahd-aboelmakarm22-github-io.vercel.app"><img src="https://img.shields.io/badge/ENTER_PORTFOLIO-00E5FF?style=for-the-badge" alt="Enter portfolio"></a>
+<a href="https://github.com/shahdAboelmakarm22/shahdAboelmakarm22.github.io/blob/main/Shahd_Galal_Resume.pdf"><img src="https://img.shields.io/badge/DOWNLOAD_RESUME-FF2BD6?style=for-the-badge" alt="Download resume"></a>
+<a href="https://www.linkedin.com/in/shahd-a-110b101b4"><img src="https://img.shields.io/badge/CONNECT_LINKEDIN-0A66C2?style=for-the-badge" alt="LinkedIn"></a>
 
 ![Status](https://img.shields.io/badge/STATUS-OPEN_TO_OPPORTUNITIES-00E5FF?style=flat-square&labelColor=09051A)
 ![Focus](https://img.shields.io/badge/FOCUS-CLOUD%20%2B%20DATA-FF2BD6?style=flat-square&labelColor=09051A)
