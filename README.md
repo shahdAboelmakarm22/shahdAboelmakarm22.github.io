@@ -21,7 +21,7 @@
 │  I design reliable data systems, automate cloud workflows,     │
 │  and turn messy inputs into useful, production-ready signals.  │
 │                                                                │
-│  > currently: Data Engineer Intern @ ITIDA                     │
+│  > recently:  Data Engineer Intern @ ITIDA                     │
 │  > building:  ETL/ELT pipelines, serverless systems, APIs      │
 │  > learning:  scalable data platforms and cloud architecture    │
 │  > location:  Egypt · open to remote and relocation             │
@@ -40,6 +40,7 @@
 
 ## `// FEATURED BUILDS`
 
+- **[Diabetes Readmissions Analytics](https://github.com/abdullah-attia/Diabetes_Readmissions_Analytics_Data_Engineering)** — team data-engineering pipeline (SSIS → PySpark → Snowflake → dbt → Power BI, orchestrated by Airflow); I built the SSIS ingestion and data profiling.
 - **[AI-Driven Serverless Image Processing Pipeline](https://github.com/shahdAboelmakarm22/Image_Processing)** — browser-to-S3 uploads, Lambda processing, Rekognition labels, and DynamoDB metadata.
 - **[DataOps Mini Project](https://github.com/shahdAboelmakarm22/dataops-mini-project)** — practical pipeline automation and DataOps workflows.
 - **[ITI SSIS Course Lab](https://github.com/shahdAboelmakarm22/ITI-SSIS-Course-Lab)** — hands-on ETL workflows with SQL Server Integration Services.

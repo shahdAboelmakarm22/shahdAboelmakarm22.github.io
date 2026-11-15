@@ -346,7 +346,7 @@
           <p class="lede">
             AWS Certified Solutions Architect and Computer Engineering graduate (AAST, 2026).
             I build ETL/ELT pipelines with Python, SQL and Apache Spark, and serverless systems on AWS.
-            Currently a Data Engineer trainee at ITIDA.
+            Recently completed a Data Engineer internship at ITIDA.
           </p>
           <div class="actions">
             <a class="btn primary" href="Shahd_Galal_Resume.pdf" download="Shahd_Galal_Resume.pdf">Download resume</a>
@@ -385,13 +385,13 @@
       </div>
       <div class="jobs">
         <div class="job">
-          <div class="when">Jul 2026 – Present</div>
+          <div class="when">Jul 2026 – Nov 2026</div>
           <details open>
-            <summary><h3>Data Engineer Intern <span class="now">Current</span></h3><p class="org">ITIDA, Alexandria (Hybrid) · Internship, train-to-hire program</p></summary>
+            <summary><h3>Data Engineer Intern</h3><p class="org">ITIDA, Alexandria (Hybrid) · Internship, train-to-hire program</p></summary>
             <ul>
               <li>Selected for a competitive train-to-hire program.</li>
-              <li>Designing scalable ETL/ELT pipelines in Python and SQL.</li>
-              <li>Building data warehousing and data management solutions with Apache Spark and AWS.</li>
+              <li>Designed scalable ETL/ELT pipelines in Python and SQL.</li>
+              <li>Built data warehousing and data management solutions with Apache Spark and AWS.</li>
             </ul>
           </details>
         </div>
@@ -448,6 +448,22 @@
       </div>
       <p class="status" id="status" aria-live="polite"></p>
       <div class="project-list" id="projectList">
+      <article class="project" data-cats="data">
+        <div>
+          <h3>Diabetes Readmissions Analytics (Data Engineering)</h3>
+          <ul class="tags"><li>SSIS</li><li>SQL Server</li><li>Apache Spark</li><li>Snowflake</li><li>dbt</li><li>Airflow</li><li>Power BI</li></ul>
+        </div>
+        <div>
+          <p>A one-click batch pipeline that turns 101,766 hospital records into a Power BI dashboard showing which diabetic patients return to hospital within 30 days, and why.</p>
+          <ul class="points">
+            <li>Owned ingestion and profiling: SSIS packages load both source CSVs into SQL Server staging, with an audit check on every run.</li>
+            <li>Profiled the raw data and documented 10 hidden quality issues, such as "?" used for missing values and 63 unlabelled codes.</li>
+            <li>Airflow runs SSIS, PySpark, Snowflake and dbt in order, reconciles row counts at each stage, and stops on any failed check (zero rows lost, 52 dbt tests).</li>
+          </ul>
+          <a href="https://github.com/abdullah-attia/Diabetes_Readmissions_Analytics_Data_Engineering">View on GitHub</a>
+        </div>
+      </article>
+
       <article class="project" data-cats="data">
         <div>
           <h3>ITI SSIS Course Lab</h3>
@@ -1047,7 +1063,7 @@
       lines(['Shahd Galal, Cloud and Data Engineer.',
         'Computer Engineering graduate (AAST, 2026) and AWS Certified Solutions Architect - Associate.',
         'I build ETL/ELT pipelines with Python, SQL and Apache Spark, and serverless systems on AWS.',
-        'Currently a Data Engineer trainee in the ITIDA train-to-hire program.']);
+        'Recently completed a Data Engineer internship in the ITIDA train-to-hire program.']);
     },
     whoami: function () { line('guest. Visiting the portfolio of Shahd Galal, Alexandria, Egypt.'); },
     skills: function () {
@@ -1059,18 +1075,19 @@
         'languages  Arabic (native), English (fluent), German (intermediate)']);
     },
     experience: function () {
-      lines(['Jul 2026 - now   Data Engineer Intern, ITIDA',
+      lines(['Jul - Nov 2026   Data Engineer Intern, ITIDA',
         'Sep 2026 - now   Teaching Assistant (part-time), AAST',
         'Apr - Jul 2026   Software Engineering Intern, DXC Technology',
         'Jul - Oct 2024   Network Engineering Intern, Telecom Egypt (WE)',
         'Jun 2024         Network Support Intern, ECPC']);
     },
     projects: function () {
-      linkLine('1. ITI SSIS Course Lab (SSIS, ETL)      ', 'https://github.com/shahdAboelmakarm22/ITI-SSIS-Course-Lab', 'repo');
-      linkLine('2. DataOps Mini Project (DataOps)       ', 'https://github.com/shahdAboelmakarm22/dataops-mini-project', 'repo');
-      linkLine('3. Serverless Image Pipeline (AWS)      ', 'https://github.com/shahdAboelmakarm22/Image_Processing', 'repo');
-      linkLine('4. IoT Monitoring Platform (Angular...) ', 'https://github.com/AbdElkader-moh/FullProjectIntern', 'repo');
-      line('5. ACPC Contest Platform (Java, React). Source code is on the AAST GitLab.');
+      linkLine('1. Diabetes Readmissions (SSIS, dbt...) ', 'https://github.com/abdullah-attia/Diabetes_Readmissions_Analytics_Data_Engineering', 'repo');
+      linkLine('2. ITI SSIS Course Lab (SSIS, ETL)      ', 'https://github.com/shahdAboelmakarm22/ITI-SSIS-Course-Lab', 'repo');
+      linkLine('3. DataOps Mini Project (DataOps)       ', 'https://github.com/shahdAboelmakarm22/dataops-mini-project', 'repo');
+      linkLine('4. Serverless Image Pipeline (AWS)      ', 'https://github.com/shahdAboelmakarm22/Image_Processing', 'repo');
+      linkLine('5. IoT Monitoring Platform (Angular...) ', 'https://github.com/AbdElkader-moh/FullProjectIntern', 'repo');
+      line('6. ACPC Contest Platform (Java, React). Source code is on the AAST GitLab.');
       linkLine('More on GitHub:', 'https://github.com/shahdAboelmakarm22', 'github.com/shahdAboelmakarm22');
     },
     certs: function () {
